@@ -82,13 +82,20 @@ function createChapterMarkers(duration) {
     const mouseTimeDisplay =
       player.controlBar.progressControl.seekBar.mouseTimeDisplay;
     const mouseTimeDiv = mouseTimeDisplay.el();
-    console.log(mouseTimeDiv.children.length);
+    // console.log(mouseTimeDiv.children.length);
     let chapterDiv = document.createElement("div");
     chapterDiv.className = "vjs-time-tooltip";
     chapterDiv.textContent = chapterTitle;
-    // console.log(chapterDiv);
-    // console.log(chapterTitle);
-    // console.log(chapterDiv);
+    // const timeStyle = mouseTimeDiv.children[0].getBoundingClientRect();
+    // console.log(timeStyle);
+    // console.log(timeStyle);
+    const toolTip = document.querySelector(".vjs-time-tooltip");
+    const timeStyle = toolTip.getBoundingClientRect();
+    chapterDiv.style.right = `${timeStyle.x - 82}px`;
+    chapterDiv.style.height = `${timeStyle.height + 13}px`;
+    // chapterDiv.style.rigth = `${timeStyle.x - 20}%`;
+    // chapterDiv.style.top = `${timeStyle.y - 30}px`;
+    // chapterDiv.style.bottom = `${timeStyle.y - 10}px`;
     if (mouseTimeDiv.children.length == 1) {
       mouseTimeDiv.append(chapterDiv);
     } else {
@@ -96,10 +103,6 @@ function createChapterMarkers(duration) {
       mouseTimeDiv.children[1].innerText = chapterTitle;
     }
     // console.log(mouseTimeDiv);
-    progressControl.addEventListener("mouseout", function () {
-      //   mouseTimeDiv.remove(chapterDiv);
-      //   mouseTimeDiv.innerHTML = "";
-    });
   });
   // Create a custom overlay for each chapter
   chapters.forEach(function (chapter) {
