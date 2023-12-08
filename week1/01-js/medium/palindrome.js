@@ -4,7 +4,12 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  return str
+    .toLowerCase()
+    .replace(/[^\w\s\']|_/g, "")
+    .replace(/\s/g, "")
+    .split("")
+    .every((ch, idx, arr) => arr[arr.length - idx - 1] === ch);
 }
 
 module.exports = isPalindrome;
