@@ -1,26 +1,105 @@
+html {
+  overflow-y: scroll;
+}
 * {
-  border: none;
   margin: 0px;
+  padding: 0px;
+  line-height: 1.7;
+  font-family: Inter, sans-serif;
+  width: 100%;
+  font-weight: 400;
+  list-style: none;
+  color: #424242;
 }
-div {
-  padding: 2px;
-  margin: 1px 1px 0px 0px;
-  align-items: center;
-}
-.Item {
-  /* color: rgba(144, 53, 53, 0.2); */
-  font: 22px;
-}
+
 .navbar {
-  padding-top: 10px;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  box-shadow: 2px 0px 2px rgba(116, 110, 110, 0.452);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3.8px 220px 0px;
+  top: 0;
+  height: fit-content;
+  box-shadow: 2px 1px 2px #eee;
+  margin-bottom: 50px;
+  position: fixed;
+  /* position: fixed; */
+}
+.ulItem {
+  color: #666;
+  font-size: 0.99rem;
+  box-sizing: border-box;
+  padding: 20px;
+  font-weight: 200;
+  text-align: center;
+  cursor: pointer;
+}
+.img {
+  height: 37px;
+  width: 169px;
+}
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .container {
   display: flex;
   justify-content: space-between;
-  min-width: 50%;
+}
+.zerodhaImage {
+  margin: auto;
+  margin-top: 160px;
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  /* margin: auto; */
+}
+.zerodhaImage img {
+  max-height: 60vh;
+  max-width: 62vw;
+}
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.item {
+  width: fit-content;
+}
+
+#mainline {
+  text-align: center;
+  font-size: 2.75rem;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+#secondaryline {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #387ed1;
+  color: white;
+  border-radius: 3px;
+  margin-top: 25px;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  border: 1px solid white;
+  line-height: 1.2em;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn:hover {
+  background-color: #222;
+}
+
+.ulItem:hover {
+  color: #387ed1;
 }

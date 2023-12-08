@@ -4,48 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Lisu+Bosa&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="navbar container">
-      <div>
-        <b
-          ><img src="images/logo.png" alt="Zerodha" height="50px" width="200px"
-        /></b>
-      </div>
+    <div class="navbar">
       <div class="container">
-        <div class="Item">Signup</div>
-        <div class="Item">About</div>
-        <div class="Item">Product</div>
-        <div class="Item">Pricing</div>
-        <div class="Item">Support</div>
+        <div class="logo">
+          <img class="img" src="./images/logo.png" alt="Zerodha Logo" />
+        </div>
+        <div class="navItems">
+          <div class="container">
+            <div class="ulItem">Signup</div>
+            <div class="ulItem">About</div>
+            <div class="ulItem">Product</div>
+            <div class="ulItem">Pricing</div>
+            <div class="ulItem">Support</div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="zerodhaImage">
-      <center>
-        <img
-          src="./images/exchange.png"
-          alt="Zerodha Exchange"
-          height="600px"
-          width="1200px"
-        />
-      </center>
+      <img src="./images/exchange.png" alt="Zerodha Exchange" />
     </div>
-    <center>
-      <div class="about">
-        <div>
-          <h1>Invest in Everything</h1>
-        </div>
-        <div>
-          <b
-            >Online Platform to invest in stocks, derivatives, mutual funds, and
-            more</b
-          >
-        </div>
-        <div style="margin-top: 18px">
-          <button class="btn">Sign up now</button>
-        </div>
+    <div class="vertical-container">
+      <div class="item" id="mainline">Invest in Everything</div>
+      <div class="item" id="secondaryline">
+        Online Platform to invest in stocks, derivatives, mutual funds, and more
       </div>
-    </center>
+      <div class="btn item" id="SignIn">Sign up now</div>
+    </div>
+    <!-- <div class="Calculator">
+      <input type="number" name="principal" id="principal" />
+      <input type="number" name="rate" id="rate" />
+      <input type="number" name="Time" id="Time" />
+      <input type="number" name="Simple" id="Interest" />
+    </div> -->
+    <script src="./index.js"></script>
   </body>
 </html>
